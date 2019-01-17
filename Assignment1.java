@@ -8,7 +8,7 @@ public class Assignment1{
   public static Connection getConnection() throws Exception{
     //facem chestia asta ca sa testam daca se face legatura la server cu un utilizator si parola
     try{
-      String url = "jdbc:mysql://localhost:3306/Assignment1";
+      String url = "jdbc:mysql://localhost:3306/sqlandjava";
       String username = "user";
       String password = "password";
       Connection conn = DriverManager.getConnection(url, username, password);
@@ -20,7 +20,7 @@ public class Assignment1{
   }
 
   public static void main(String[] args) throws Exception{
-  //hampus recomanda ca in Windos sa folosim cmd pentru a scrie codul ca sa nu avem erori aiurea
+  //hampus recomanda ca in Windows sa folosim cmd pentru a scrie codul ca sa nu avem erori aiurea
 //Get Connection
   Connection conn = getConnection();
 
@@ -32,7 +32,7 @@ public class Assignment1{
 
   //process ResultSet
   while(res.next()){
-    System.out.println(res.getString("id")+": "+res.getString("firstname")+" "+res.getString("lastname"));
+    System.out.println(res.getString("person_id")+": "+res.getString("firstname")+" "+res.getString("lastname"));
   }
   }
 
